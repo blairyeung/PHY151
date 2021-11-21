@@ -1,0 +1,135 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\title{
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{Physics 151 final project} \\ [10pt]
+		\huge How fast do cars drive on Jarvis street? \\
+}
+\author{Blair Yang, Roy Jin}
+\begin{document}
+\maketitle
+\begin{abstract}
+Jarvis street, a major north-south street in downtown Toronto, that is currently under construction. This study aims to provide insights into the velocity of the cars on Jarvis street from Dundas st. street to Gerrad st. between 15:00 to 18:00 on a regular weekend day. We found that the average time for the vehicle to pass \textbf{12.09m $\pm$ 0.16m} is \textbf{1.77s $\pm$ 0.46s}. We estimated the average velocity of the cars to be \textbf{6.82m/s $\pm$ 1.77m/s}.
+\end{abstract} 
+
+\section{Motivation}
+We aim to estimate the average velocity of the cars on weekend on Jarvis street when it is under construction. This may provide insight into the reduction of carrying capacity of a street when it is under construction.
+\\Jarvis street, as a major north-south street in downtown Toronto, is carrying thousands of cars everyday. We aim to use a simple model to evaluate the average velocity of cars on this street. Due to the on-going construction of the street, there is the absence of two lanes and the presence of some cones. Therefore, we believe that the measurement would be easier.
+
+
+\section{Procedure}
+\subsection{Observation \& sampling}
+We measured the average velocity of N = 36 cars within the. We excluded the cars that parked within our range (\textbf{Table 1}). 
+\begin{center}
+	\textbf{Table 1}: The type of the vehicles\\
+    \begin{tabular}{cc}
+    \toprule
+    Vehicle type &Sample size\\
+    \midrule
+    All & N = 36\\
+    Truck     & N = 1 \\
+    Sedan     &  N = 24\\
+    SUV & N = 11\\
+    Bus \& Streetcars & N = 0 (excluded)\\
+    \bottomrule
+    \end{tabular}
+\end{center}
+We recorded the motions of 36 vehicles passing through a selected distance and measured the time each vehicle used to travel over that distance.
+\subsection{Measurement}
+We measured the distance between two cones for three times with an average of 12.09m with a measuring uncertainty of $\pm$ 0.005m (uncertainty is relatively big due to using a portable laser rangefinder). We measured the time took for each car to pass using a stopwatch app on the phone, with the device uncertainty of $\pm$ 0.005s and average human reaction time of 116ms.
+\begin{center}
+	\textbf{Table 2}: Raw data of the study (excl. time)\\
+    \begin{tabular}{cc}
+    \toprule
+    Parameters &Value\\
+    \midrule
+    Distance ($d$) & Mean = 12.09m\\
+    Reaction time  ($\Delta t_r$) & Mean = 116ms\\
+    $u$ of $d$ measurement & 0.005m\\
+    $u$ of $\Delta t_r$ measurement & 0.5ms\\
+    $d$ averaged from  & 3\\
+    $\Delta t_r$ averaged from & 10\\
+    \bottomrule
+    \end{tabular}
+\end{center}
+We started the stopwatch when a car’s front wheels touched the starting point, and stopped timing when the same wheels touched the terminal point.
+\subsection{Data processing}
+After acquiring the data, we evaluated the data using the following equation:
+\begin{equation}
+	v =\frac{\Delta d}{\Delta t}
+\end{equation}
+However, due to human reaction time, we may expect the time taken to press to stopwatch to be longer than the actual time where the vehicle takes to pass. Thus, we modified \textbf{equation (1)} to fit our need:
+\begin{equation}
+	v = \frac{\Delta d}{\Delta t_{m} - \Delta t_r}
+\end{equation}
+\begin{center}
+	Where $\Delta t_m$ denotes to the measured time.
+\end{center}
+We evaluated our data  using \textbf{equation (2)}. 
+ 
+
+\section{Analysis}
+\subsection{Descriptive statistics}
+After acquiring the data we needed, we performed descriptive statistics (\textbf{Table 3}) to evaluate the standard deviation and the mean. The raw data was attached in the supplementary material.
+
+\begin{center}
+	Table 3: Mean and standard deviation of some key parameters in this study\\
+	\begin{tabular}{ccc}
+	\toprule
+	Parameter& Value & Standard deviation ($u$)\\
+	\midrule
+	$\Delta d$& 12.09m & 0.16m\\
+	$\Delta t_m$ & 1.89s & 0.46s\\
+	$\Delta t_r$ & 0.116s & 0.012s\\
+	$\Delta t$ & 1.77s & 0.46s\\
+	$v$ & 6.82m/s & 1.77m/s\\
+	\bottomrule
+\end{tabular}
+\end{center}
+We picked the standard deviation of each group of data to represent their uncertainty.Based on the standard deviation given in the table, we used the rule of addition and multiplication to calculate the uncertainty (\textbf{Supplementary Materials}). 
+\subsection{Data presentation}
+Substitute $\Delta d$,$\Delta t_m$, and $\Delta t_r$ into \textbf{equation (2)}, we have:
+\begin{equation}
+	\begin{split}
+		 v = \frac{12.09m\pm 0.16m}{(1.89s\pm 0.46s)-(0.116s\pm0.012s)}\\
+		 = 6.82m/s \pm 1.77m/s
+	\end{split}
+\end{equation}
+
+\section*{Conclusions}
+Based on the time used for N= 36 cars to travel over a certain distance, we conclude that the average velocity of vehicles on Jarvis Street during 15:00 to 18:00 on weekend day is \textbf{6.82m/s $\pm$ 1.77m/s}. 
+\\Our study is subject to some limitations. We have a relatively big uncertainty value. The relatively large uncertainty in velocity was due to the relatively large standard deviation $\sigma$ in the time taken for a car to pass the distance. We had some outliers in our data== due to different vehicle types, human reaction time, and measurement errors.
+\section{Supplementary materials}
+\subsection{Calculation}
+\subsubsection{Uncertainty for $\Delta t$}
+We apply the rule of propagation of uncertainty in subtraction to find the uncertainty of velocity $v$ according to \textbf{equation (2)}. The procedure is shown in \textbf{equation (3)}:
+\begin{equation}
+	u(\Delta t) = \sqrt{u(\Delta t_m)^2 + u(\Delta t_r)^2}
+\end{equation}
+\begin{center}
+	$= \sqrt{(0.46s)^2 + (0.012s)^2}$ = 0.46s
+\end{center}
+\subsubsection{Uncertainty for $v$}
+We apply the rule of propagation of uncertainty in multiplication to find the uncertainty of velocity $v$ according to \textbf{equation (2)}. The procedure is shown in \textbf{equation (4), (5)}:
+\begin{equation}
+	\frac{u(v)}{|v|} = \sqrt{(\frac{u(\Delta t)}{|\Delta t|})^2 + (\frac{u(\Delta d)}{|\Delta d|})^2}
+\end{equation}
+\begin{equation}
+	u(v) = |v|\sqrt{(\frac{u(\Delta t)}{|\Delta t|})^2 + (\frac{u(\Delta d)}{|\Delta d|})^2}
+\end{equation}
+\\Calculation for the fractions of \textbf{equation (4)}.
+\begin{equation}
+	\frac{u(\Delta t)}{|\Delta t|} = \frac{0.46s}{1.77s} = 0.26 = 26\%
+\end{equation}
+	
+\begin{equation}
+	\frac{u(\Delta d)}{|\Delta d|} = \frac{0.16m}{12.09m} = 0.013 = 1.3\%
+\end{equation}
+\\Substitute \textbf{equation(6), (7)}, and $|v|$ = 6.82m/s into \textbf{equation (5)}, we have:
+\begin{equation}
+	u(v) = \sqrt{0.26^2+0.013^2}(6.82m/s) = 1.77m/s
+\end{equation}
+\subsection{Data publicity}
+We uploaded the processed data onto our git-hub page. It can be found on.
+\end{document}
